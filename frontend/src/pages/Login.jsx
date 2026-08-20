@@ -10,7 +10,7 @@ export default function Login() {
     evento.preventDefault();
 
     try {
-      const resposta = await fetch('http://localhost:3000/login', {
+      const resposta = await fetch('[https://gerenciador-de-finan-as.onrender.com](https://gerenciador-de-finan-as.onrender.com)', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, senha }),

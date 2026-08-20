@@ -20,7 +20,7 @@ export default function Dashboard() {
       navigate('/'); return;
     }
     try {
-      const resposta = await fetch('http://localhost:3000/transacoes', {
+      const resposta = await fetch('[https://gerenciador-de-finan-as.onrender.com](https://gerenciador-de-finan-as.onrender.com)', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (resposta.ok) {
@@ -41,8 +41,8 @@ export default function Dashboard() {
 
     // Se tiver um ID em edição, a URL muda para a de Atualizar. Se não, é a de Criar.
     const url = idEmEdicao 
-      ? `http://localhost:3000/transacoes/${idEmEdicao}` 
-      : 'http://localhost:3000/transacoes';
+      ? `[https://gerenciador-de-finan-as.onrender.com](https://gerenciador-de-finan-as.onrender.com)${idEmEdicao}` 
+      : '[https://gerenciador-de-finan-as.onrender.com](https://gerenciador-de-finan-as.onrender.com)';
     
     const metodo = idEmEdicao ? 'PUT' : 'POST';
 
@@ -72,7 +72,7 @@ export default function Dashboard() {
 
     const token = localStorage.getItem('token');
     try {
-      const resposta = await fetch(`http://localhost:3000/transacoes/${id}`, {
+      const resposta = await fetch(`[https://gerenciador-de-finan-as.onrender.com](https://gerenciador-de-finan-as.onrender.com)${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
